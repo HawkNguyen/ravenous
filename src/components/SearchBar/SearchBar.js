@@ -47,8 +47,12 @@ class SearchBar extends React.Component{
   }
 
   handleSearch(event){
-    this.props.searchBar(this.state.term,this.state.location,this.state.sortBy)
     event.preventDefault();
+    if(this.state.location !== ""){
+      this.props.searchBar(this.state.term,this.state.location,this.state.sortBy)
+    } else {
+      alert("Please update your searching field");
+    }
   }
 
   renderSortByOption(){
@@ -73,7 +77,7 @@ class SearchBar extends React.Component{
           <input placeholder="Where?" onChange={this.handleLocationChange}/>
         </div>
         <div className="SearchBar-submit">
-          <a href="" onClick={this.handleSearch}>Let's Go</a>
+          <a href="#businessList" onClick={this.handleSearch}>Let's Go</a>
         </div>
       </div>
     );
