@@ -35,7 +35,7 @@ module.exports = {
        ]
      },
      {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif|svg|ico)$/,
         use: [
           {
             loader: 'url-loader',
@@ -57,8 +57,9 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
+      template: "./src/webpack/index.html",
+      filename: "./index.html",
+      favicon: "./src/webpack/favicon.ico"
     })
   ]
 };
