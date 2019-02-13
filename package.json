@@ -6,6 +6,7 @@
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/polyfill": "^7.2.5",
     "@babel/runtime": "^7.3.1",
+    "@types/clean-webpack-plugin": "^0.1.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "^2.1.3",
